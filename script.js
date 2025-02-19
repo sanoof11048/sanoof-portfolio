@@ -1,5 +1,5 @@
 function topFunction() {
-  document.documentElement.scrollTop = 0;
+  document.documentElement.scrollTop = 0
 }
 
 document
@@ -35,6 +35,8 @@ document
     }
 
     const formData = new FormData(this);
+    console.log(formData)  
+    console.log(this)
 
     try {
       const response = await fetch(
