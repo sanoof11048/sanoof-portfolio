@@ -1,95 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="icon" href="./assets/newSanoof_1.jpg" type="image/png" style="border-radius: 50%;" sizes="16*16">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Parkinsans:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Muhammed Sanoof</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- SweetAlert2 CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css">
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
 
-<!-- SweetAlert2 JS -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Parkinsans:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Remix Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+    integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Favicons & Manifest -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- SweetAlert2 -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
 </head>
-<body>
-    
-        <div class="row header">
-            
-    <Header id="home" class="fixed-top home">
-       
-            <div class="col-md-12 pt-4">
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                
-                <h1 class="d-block d-md-none headLogo text-center ps-5"  >Sanoof</h1>
-                <button class="navbar-toggler ms-auto btn-tog me-5" type="menu" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><i class="fa-solid fa-caret-down "></i></span>
-                  </button>
-                  
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto list">
-                    <li class="nav-item active">
-                        <a class="nav-link ps-4 pe-4 lists" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link lists ps-4 pe-4" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link lists ps-4 pe-4" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link lists ps-4 pe-4" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link lists ps-4 pe-4" href="#contact">Contact</a>
-                      </li>
-                  </ul>
-                </div>
-              </nav>
-        </div>
 
+
+<body>
+
+    <div class="row header" id="home">
+    <header id="home" class="fixed-top home custom-navbar-wrapper">
+        <div class="container p-0">
+            <nav class="navbar navbar-expand-lg navbar-light  shadow-sm px-4 py-2 rounded-4 custom-navbar">
+
+                <h1 class="d-block d-md-none headLogo text-center ps-3">Sanoof</h1>
+
+                <button class="navbar-toggler ms-auto btn-tog" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-caret-down"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto list">
+                        <li class="nav-item">
+                            <a class="nav-link px-4 lists" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 lists" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 lists" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 lists" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 lists" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-4 lists" href="#education">Education</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
         </div>
-    </Header>
+    </header>
+</div>
+
 
 
     <section id="home" class="fSection pt-5 pb-5">
         <div class="container pt-5 pb-5 mb-3">
-            
+
             <div class=" row ms-auto text-center">
                 <h1 class="greet pt-5 mt-5">Hey, I'm Muhammed Sanoof </h1>
                 <div class="para-h ms-auto me-auto">
-                <p class="">A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product</p>
-            </div>
+                    <p class="">A Result-Oriented Web Developer building and managing Websites and Web Applications that
+                        leads to the success of the overall product</p>
+                </div>
             </div>
             <div class="icons-box">
-                    
-                <a href="https://www.instagram.com/ft.sanoof" target="_blank" class="icons" >
+
+                <a href="https://www.instagram.com/ft.sanoof" target="_blank" class="icons">
                     <i class="fa fa-brands fa-instagram fa-xl"></i></a>
-                <a href="https://github.com/sanoof11048" target="_blank" class="icons"> 
-                    <i class="fa-brands fa-github fa-xl" ></i></a>
-                <a href="https://dev.to/sanoof_" target="_blank" class="icons"> 
-                    <i class="fa-brands fa-dev fa-xl" ></i></a>
-                <a href="https://www.linkedin.com/in/mohammed-sanoof-6b45992ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icons"> 
-                    <i class="fa-brands fa-linkedin-in fa-xl" ></i></a>
-                <a href="https://x.com/ft_Sanoof" target="_blank" class="icons"> 
-                    <i class="fa-brands fa-x-twitter fa-xl" ></i></a>
+                <a href="https://github.com/sanoof11048" target="_blank" class="icons">
+                    <i class="fa-brands fa-github fa-xl"></i></a>
+                <a href="https://dev.to/sanoof_" target="_blank" class="icons">
+                    <i class="fa-brands fa-dev fa-xl"></i></a>
+                <a href="https://www.linkedin.com/in/sanoof"
+                    target="_blank" class="icons">
+                    <i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+                <a href="https://x.com/ft_Sanoof" target="_blank" class="icons">
+                    <i class="fa-brands fa-x-twitter fa-xl"></i></a>
             </div>
             <div class="text-center about-btn mt-5">
-                <a href="#about" class="about-btna p-5" >ABOUT ME</a>
+                <a href="#about" class="about-btna p-5">ABOUT ME</a>
             </div>
 
         </div>
-        
-        
+
+
 
 
     </section>
@@ -103,18 +148,22 @@
             <div class="row">
                 <div class="col-md-6 pt-5">
                     <h2 class="name-san">I'm Sanoof</h2>
-                    <h5>.NET Developer</h5>
+                    <h5>Fullsatck .NET Developer</h5>
                     <p class="pt-4 ps-1">
-                        I am a .NET developer based in Kerala, India. I am a Plus-two computer-science undergraduate from GHSS Peruvallur. I am very passionate about improving my coding skills & developing applications & websites. Working for myself to improve my skills. Love to build Full-Stack clones.
+                        I am a Fullstack .NET developer based in Kerala, India. I am a Plus-two computer-science undergraduate
+                        from GHSS Peruvallur. I am very passionate about improving my coding skills & developing
+                        applications & websites. Working for myself to improve my skills. Love to build Full-Stack
+                        projects.
                     </p>
                     <p class="ps-1 para-add">
-                        Email: <a class="para-add" href="mailto:sanoofmohammed.pvt@gmail.com">sanoofmohammed.pvt@gmail.com</a>
+                        Email: <a class="para-add"
+                            href="mailto:sanoofmohammed.pvt@gmail.com">sanoofmohammed.pvt@gmail.com</a>
                     </p>
                     <p class="para-add ps-1">
                         Place: Kerala, India - 676317
                     </p>
                     <div class="cv-download-container mt-4">
-                        <a href="assets/RESUME-SANOOF.pdf" download class="cv-download-btn">
+                        <a href="assets/Sanoof+Fullstack+Developer+(React+++.NET).pdf" download class="cv-download-btn">
                             <i class="fas fa-download me-2"></i>Download CV
                         </a>
                     </div>
@@ -139,64 +188,92 @@
             <div class="row pt-5 pb-4">
                 <h1 class="sec-head">My <span>Skills</span></h1>
             </div>
-            
+
             <div class="skills-grid">
-                <div class="skill-box">
-                    <div class="skill-content">
-                        <img src="assets/icons/vecteezy_javascript-logo-png-javascript-icon-transparent-png_27127463.png" alt="JavaScript">
-                        <h5>JavaScript</h5>
-                    </div>
-                </div>
-                
-                <div class="skill-box">
-                    <div class="skill-content">
-                        <img src="assets/icons/icons8-css-logo-color/icons8-css-logo-480.png" alt="CSS">
-                        <h5>CSS</h5>
-                    </div>
-                </div>
-                
-                <div class="skill-box">
-                    <div class="skill-content">
-                        <img src="assets/icons/icons8-html-logo-color/icons8-html-logo-480.png" alt="HTML">
-                        <h5>HTML</h5>
-                    </div>
-                </div>
-                
+
+
                 <div class="skill-box">
                     <div class="skill-content">
                         <img src="assets/icons/icons8-react-native-480.png" alt="React">
                         <h5>React</h5>
                     </div>
                 </div>
-                
+
                 <div class="skill-box">
                     <div class="skill-content">
                         <img src="assets/icons/icons8-redux-480.png" alt="Redux">
                         <h5>Redux</h5>
                     </div>
                 </div>
-                
+
                 <div class="skill-box">
                     <div class="skill-content">
                         <img src="assets/icons/csharp.png" alt="C#">
                         <h5>C#</h5>
                     </div>
                 </div>
-                
+
                 <div class="skill-box">
                     <div class="skill-content">
                         <img src="assets/icons/net.png" alt=".NET">
                         <h5>.NET</h5>
                     </div>
                 </div>
-                
+
                 <div class="skill-box">
                     <div class="skill-content">
                         <img src="assets/icons/icons8-sql-96.png" alt="SQL">
                         <h5>SQL</h5>
                     </div>
                 </div>
-                
+
+                <div class="skill-box">
+                    <div class="skill-content">
+                        <img src="assets/icons/EF.png" alt="SQL">
+                        <h5>Entity Framework</h5>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-content">
+                        <img src="assets/icons/ADO-DOT-NET-Basics.jpg" alt="SQL">
+                        <h5>ADO.NET</h5>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-content">
+                        <img src="assets/icons/Dapper Logo.png" alt="SQL">
+                        <h5>Dapper</h5>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-content">
+                        <img src="assets/icons/tailwind.png" alt="SQL">
+                        <h5>Tailwind</h5>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-content">
+                        <img src="assets/icons/vecteezy_javascript-logo-png-javascript-icon-transparent-png_27127463.png"
+                            alt="JavaScript">
+                        <h5>JavaScript</h5>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-content">
+                        <img src="assets/icons/icons8-css-logo-color/icons8-css-logo-480.png" alt="CSS">
+                        <h5>CSS</h5>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-content">
+                        <img src="assets/icons/icons8-html-logo-color/icons8-html-logo-480.png" alt="HTML">
+                        <h5>HTML</h5>
+                    </div>
+                </div>
                 <!-- <div class="skill-box cv-box">
                     <div class="skill-content">
                         <i class="fas fa-file-download"></i>
@@ -214,8 +291,33 @@
             <div class="section-header">
                 <h1 class="sec-head">My <span>Projects</span></h1>
             </div>
-            
             <div class="projects-grid">
+
+                <!-- MediConnect Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/mediConnect.png" alt="MediConnect">
+                        <div class="project-overlay">
+                            <a href="https://sanoof-mediConnect.vercel.app" target="_blank" class="view-project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>MediConnect</h3>
+                        <p>A medical communication platform connecting nurses, relatives, and admins with real-time
+                            vitals, alerts, and patient care updates.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>.NET Core</span>
+                            <span>Entity Framework</span>
+                            <span>SQL Server</span>
+                            <span>Cloudinary</span>
+                            <span>JWT Auth</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div class="project-image">
                         <img src="assets/plashoe.png" alt="Plashoe E-commerce">
@@ -227,7 +329,7 @@
                     </div>
                     <div class="project-info">
                         <h3>Plashoe E-commerce</h3>
-                        <p>A complete full-stack e-commerce platform for footwears.</p>
+                        <p>A full-stack e-commerce app for footwear, featuring cart, admin, and order tracking.</p>
                         <div class="project-tags">
                             <span>React</span>
                             <span>.NET Core</span>
@@ -237,9 +339,8 @@
                         </div>
                     </div>
                 </div>
-                
-                
-               
+
+
                 <!-- Project 4 -->
                 <div class="project-card">
                     <div class="project-image">
@@ -252,11 +353,14 @@
                     </div>
                     <div class="project-info">
                         <h3>ADOTZEE</h3>
-                        <p>A professional website built for a client with modern design principles.</p>
+                        <p>Responsive admission consultancy site designed with modern React components.</p>
+
                         <div class="project-tags">
                             <span>React</span>
                             <span>TailwindCSS</span>
                             <span>Route</span>
+                            <span>Context</span>
+                            <span>Material UI</span>
                         </div>
                     </div>
                 </div>
@@ -264,14 +368,16 @@
                     <div class="project-image">
                         <img src="assets/shoe-old.png" alt="Shoe E-commerce">
                         <div class="project-overlay">
-                            <a href="https://react-e-commerce-kappa-eight.vercel.app/" target="_blank" class="view-project">
+                            <a href="https://react-e-commerce-kappa-eight.vercel.app/" target="_blank"
+                                class="view-project">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Shoe E-commerce</h3>
-                        <p>A React-based e-commerce platform for footwear with modern UI/UX.</p>
+
+                        <p>A responsive React UI footwear store with cart and filter options.</p>
                         <div class="project-tags">
                             <span>React</span>
                             <span>JSON</span>
@@ -279,7 +385,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
@@ -292,7 +398,8 @@
                     </div>
                     <div class="project-info">
                         <h3>Old Portfolio</h3>
-                        <p>My previous portfolio website showcasing my skills and projects.</p>
+
+                        <p>My old portfolio showcasing early projects and basic web skills in HTML/CSS/JS.</p>
                         <div class="project-tags">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -300,7 +407,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-image">
@@ -313,7 +420,7 @@
                     </div>
                     <div class="project-info">
                         <h3>Clone Website</h3>
-                        <p>A pixel-perfect clone website demonstrating my attention to detail.</p>
+                        <p>A pixel-perfect clone project, designed to mimic layout and style of a real website.</p>
                         <div class="project-tags">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -321,14 +428,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
-                
+
             </div>
         </div>
     </section>
 
-    
+
 
 
 
@@ -337,9 +444,10 @@
         <div class="container">
             <div class="education-header">
                 <h1 class="edu-title">Education <span>&amp; Experience</span></h1>
-                <p class="edu-subtitle">"Education is not the learning of facts, but the training of the mind to think."</p>
+                <p class="edu-subtitle">"Education is not the learning of facts, but the training of the mind to think."
+                </p>
             </div>
-            
+
             <div class="education-cards">
                 <!-- Education Card 1 -->
                 <div class="edu-card">
@@ -362,7 +470,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Education Card 2 -->
                 <div class="edu-card">
                     <div class="edu-card-header">
@@ -384,7 +492,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Education Card 3 -->
                 <div class="edu-card">
                     <div class="edu-card-header">
@@ -412,127 +520,153 @@
 
 
 
-<!-- Contact  Section   -->
+    <!-- Contact  Section   -->
 
 
-    <section class="contact p-5" id="contact" >
+    <section class="contact p-5" id="contact">
         <div class="container col-md-12">
-        <div class="row mt-5 pt-5 text-center">
-            <h1 class="sec-head pb-5 con">Contact</h1>
-            <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
-        </div>
-    </div>
-    <div class="form-container">
-     
-        <form id="submit-form">
-          <div class="mb-3">
-            <label class="">Name</label>
-            <input type="text" class="form-in inp-sp" id="name" name="name" placeholder="    Enter Your Name">
-          </div>
-          <div class="mb-3">
-            <label  class="">Email</label><br>
-            <input type="email" class="form-in inp-sp" id="email" name="email" placeholder="    Enter Your Email">
-          </div>
-          <div class="mb-3">
-            <label  class="">Message</label>
-            <textarea class="form-in" id="message" rows="10" cols="10" name="message" placeholder="    Enter Your Message"></textarea>
-          </div>
-          <button  class="sub-btn">Submit</button>
-        </form>
-      </div>
-
-
-
-      </section>
-
-
-<!-- FOOTER SECTION -->
-<footer>
-    <!-- Main Footer Content -->
-    <div class="footer-main">
-      <div class="container">
-        <div class="row">
-          <!-- About Column -->
-          <div class="col-lg-4 col-md-6 footer-col">
-            <div class="footer-about">
-              <h3>Sanoof's Portfolio</h3>
-              <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
-              <p class="tagline">Keep Rising 🚀</p>
-              <div class="chat-invite">Connect with me over live chat!</div>
+            <div class="row mt-5 pt-5 text-center">
+                <h1 class="sec-head pb-5 con">Contact</h1>
+                <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
+                </p>
             </div>
-          </div>
-          
-          <!-- Quick Links Column -->
-          <div class="col-lg-4 col-md-6 footer-col">
-            <div class="footer-links">
-              <h3>Quick Links</h3>
-              <ul>
-                <li><a href="#Home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
-                <li><a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a></li>
-                <li><a href="#education"><i class="fas fa-chevron-right"></i> Education</a></li>
-                <li><a href="#work"><i class="fas fa-chevron-right"></i> Work</a></li>
-                <li><a href="#experience"><i class="fas fa-chevron-right"></i> Experience</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- Contact Column -->
-          <div class="col-lg-4 col-md-6 footer-col">
-            <div class="footer-contact">
-              <h3>Contact Info</h3>
-              <div class="contact-info">
-                <p><i class="fas fa-phone"></i> +91 7907805626</p>
-                <p><i class="fas fa-envelope"></i> sanoofmohammed.pvt@gmail.com</p>
-                <p><i class="fas fa-map-marked-alt"></i> Kerala, India-676317</p>
-              </div>
-              <div class="social-links">
-                <a href="https://www.instagram.com/ft.sanoof?igsh=bnFlcXRldjJ6c2gy" target="_blank" aria-label="Instagram">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://github.com/sanoof11048" target="_blank" aria-label="GitHub">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://dev.to/sanoof_" target="_blank" aria-label="Dev.to">
-                  <i class="fa-brands fa-dev"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/sanoof" target="_blank" aria-label="LinkedIn">
-                  <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://twitter.com/sanoof986599" target="_blank" aria-label="Twitter">
-                  <i class="fa-brands fa-x-twitter"></i>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
+        <div class="form-container">
+
+            <form id="submit-form">
+                <div class="mb-3">
+                    <label class="">Name</label>
+                    <input type="text" class="form-in inp-sp" id="name" name="name" placeholder="    Enter Your Name">
+                </div>
+                <div class="mb-3">
+                    <label class="">Email</label><br>
+                    <input type="email" class="form-in inp-sp" id="email" name="email"
+                        placeholder="    Enter Your Email">
+                </div>
+                <div class="mb-3">
+                    <label class="">Message</label>
+                    <textarea class="form-in" id="message" rows="10" cols="10" name="message"
+                        placeholder="    Enter Your Message"></textarea>
+                </div>
+                <button class="sub-btn">Submit</button>
+            </form>
+        </div>
+
+
+
+    </section>
+
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <!-- About Column -->
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <div class="footer-about">
+                            <h3>Sanoof's Portfolio</h3>
+                            <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
+                            <p class="tagline">Keep Rising 🚀</p>
+                            <div class="chat-invite">Connect with me over live chat!</div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <div class="footer-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                                <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                                <li><a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a></li>
+                                <li><a href="#education"><i class="fas fa-chevron-right"></i> Education</a></li>
+                                <li><a href="#work"><i class="fas fa-chevron-right"></i> Work</a></li>
+                                <li><a href="#experience"><i class="fas fa-chevron-right"></i> Experience</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <div class="footer-contact">
+                            <h3>Contact Info</h3>
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone"></i> +91 7907805626</p>
+                                <p><i class="fas fa-envelope"></i> sanoofmohammed.pvt@gmail.com</p>
+                                <p><i class="fas fa-map-marked-alt"></i> Kerala, India-676317</p>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/ft.sanoof?igsh=bnFlcXRldjJ6c2gy" target="_blank"
+                                    aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://github.com/sanoof11048" target="_blank" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://dev.to/sanoof_" target="_blank" aria-label="Dev.to">
+                                    <i class="fa-brands fa-dev"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/sanoof" target="_blank" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://twitter.com/sanoof986599" target="_blank" aria-label="Twitter">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+<footer class="footer-copyright">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+        <p class="mb-0">&copy; 2024 Muhammed Sanoof. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="mb-0 designer">
+          Designed by 
+          <a href="https://www.instagram.com/ft.sanoof" target="_blank" rel="noopener noreferrer">
+            Sanoof
+          </a>
+        </p>
       </div>
     </div>
-    
-    <!-- Copyright Section -->
-    <div class="footer-copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p>&copy; 2024 Muhammed Sanoof. All rights reserved.</p>
-          </div>
-          <div class="col-md-6">
-            <p class="designer">Designed by <a href="https://www.instagram.com/ft.sanoof" target="_blank">Sanoof</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Back to Top Button -->
-    <!-- <button id="myBtn" title="Go to top">
+  </div>
+</footer>
+
+
+        <!-- Back to Top Button -->
+        <!-- <button id="myBtn" title="Go to top">
       <i class="fas fa-arrow-up"></i>
     </button> -->
-  </footer>
+    </footer>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
 
-<script src="script.js" type="text/javascript"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+    <script src="script.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(function (registration) {
+                        console.log('ServiceWorker registered:', registration);
+                    })
+                    .catch(function (error) {
+                        console.log('ServiceWorker registration failed:', error);
+                    });
+            });
+        }
+    </script>
 
 </body>
+
 </html>
