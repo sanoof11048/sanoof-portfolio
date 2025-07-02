@@ -1163,7 +1163,7 @@ footer {
 }
 
 .project-info h3 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 15px;
   color: #333;
@@ -1219,6 +1219,37 @@ footer {
   animation: fadeInUp 0.5s ease forwards;
   opacity: 0;
 }
+
+.status-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .project-logo {
+            font-size: 4rem;
+            color: white;
+            z-index: 2;
+            position: relative;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+.project-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.2s; }
