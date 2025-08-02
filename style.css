@@ -23,9 +23,7 @@ h1 {
   background: none;
   float: left;
 }
-/* .home {
-  background-color: #fff;
-} */
+
 /* .header {
   background-color: #fff;
 } */
@@ -88,14 +86,22 @@ h1 {
 
 .fSection {
   background-image: url("assets/bg-sec.png");
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
+  margin: auto;
+  padding: 0 1rem;
   font-family: "Parkinsans", sans-serif;
+
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
 }
+
 .greet {
   font-weight: 800;
+  /* margin-top: 1000px; */
 }
 .about {
   background: white;
