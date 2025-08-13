@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanoof's Projects</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: #555555;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            border-radius: 100px;
+        }
+
+        .hero {
+            min-height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            background: linear-gradient(180deg, #ffffff 0%, #888888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #888888;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 1px;
+            background: #111111;
+            border: 1px solid #111111;
+            border-radius: 20px;
+        }
+        
+        .project {
+            border-radius: 20px;
+            background: #0a0a0a;
+            padding: 3rem;
+            position: relative;
+            transition: all 0.3s ease;
+            border-right: 1px solid #111111;
+            border-bottom: 1px solid #111111;
+        }
+
+        .project:hover {
+            background: #0f0f0f;
+        }
+
+        .project::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 0;
+            background: #ffffff;
+            transition: height 0.3s ease;
+        }
+
+        .project:hover::before {
+            height: 100%;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .project-title h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .project-icon {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ffffff;
+        }
+
+        .project-status {
+            font-size: 0.8rem;
+            color: #666666;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .status-live {
+            color: #00ff88;
+        }
+
+        .status-progress {
+            color: #ffaa00;
+        }
+
+        .project-description {
+            color: #cccccc;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            color: #888888;
+            font-size: 0.8rem;
+            font-weight: 400;
+            padding: 0.3rem 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            color: #ffffff;
+        }
+
+        .tech-tag::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .tech-tag:hover::after {
+            width: 100%;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .project-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        .project-link:hover::after {
+            width: 100%;
+        }
+
+        .project-link i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover i {
+            transform: translateX(3px);
+        }
+
+        .load-more {
+            text-align: left;
+            margin: 5rem 0;
+        }
+
+        .load-more-btn {
+            position: absolute;
+            top: 20px;
+            align-items: center;
+            gap: 1rem;
+            background: none;
+            border: 1px solid #333333;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .load-more-btn:hover {
+            border-color: #ffffff;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+}
+
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                margin-bottom: 3rem;
+                min-height: 30vh;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .project {
+                padding: 2rem;
+                border-right: none;
+            }
+
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .project {
+                padding: 1.5rem;
+            }
+
+            .project-title h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Projects</h1>
+            </div>
+        </div>
+        <div class="load-more">
+            <a href="#" class="load-more-btn">
+                <i class="fas fa-arrow-left"></i>
+                Go Back
+            </a>
+        </div>
+        <div class="projects">
+            <div class="project">
+                <img src="assets/carple-preview.png" alt="Carple Project Screenshot" class="project-image" />
+                <div class="project-header">
+                    <div class="project-title">
+                        <div class="project-icon"></div>
+                        <h3>Carple</h3>
+                    </div>
+                    <span class="project-status status-progress">In Progress</span>
+                </div>
+                <p class="project-description">
+                    A ride-sharing and vehicle pooling management system with real-time request handling, driver mapping, and trip analytics.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">React Query</span>
+                    <span class="tech-tag">.NET Core</span>
+                    <span class="tech-tag">Dapper</span>
+                    <span class="tech-tag">SQL Server</span>
+                    <span class="tech-tag">JWT Auth</span>
+                    <span class="tech-tag">TypeScript</span>
+                </div>
+                <a href="https://carple-app.vercel.app" target="_blank" class="project-link">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project">
+                <img src="assets/webzio-preview.png" alt="Carple Project Screenshot" class="project-image" />
+                <div class="project-header">
+                    <div class="project-title">
+                        <div class="project-icon"></div>
+                        <h3>Webzio</h3>
+                    </div>
+                    <span class="project-status status-progress">In Progress</span>
+                </div>
+                <p class="project-description">
+                    A web development studio offering custom websites, e-commerce solutions, and web applications.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Vercel</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">Responsive</span>
+                    <span class="tech-tag">SEO</span>
+                </div>
+                <a href="https://webzio-info.vercel.app" target="_blank" class="project-link">
+                    View Live <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project">
+                <img src="assets/machinery-project.png" alt="Carple Project Screenshot" class="project-image" />
+                <div class="project-header">
+                    <div class="project-title">
+                        <div class="project-icon"></div>
+                        <h3>Machinery Marketplace</h3>
+                    </div>
+                    <span class="project-status status-progress">In Progress</span>
+                </div>
+                <p class="project-description">
+                    A B2B platform for buying/selling used industrial machinery with inventory listings and logistics coordination.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">.NET Core</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Azure</span>
+                    <span class="tech-tag">IoT</span>
+                    <span class="tech-tag">REST API</span>
+                </div>
+                <a href="https://machinery-project.vercel.app" target="_blank" class="project-link">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project">
+                <img src="assets/mediConnect.png" alt="Carple Project Screenshot" class="project-image" />
+                <div class="project-header">
+                    <div class="project-title">
+                        <div class="project-icon"></div>
+                        <h3>MediConnect</h3>
+                    </div>
+                    <span class="project-status status-live">Live</span>
+                </div>
+                <p class="project-description">
+                    A medical communication platform connecting nurses, relatives, and admins with real-time vitals and alerts.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">.NET Core</span>
+                    <span class="tech-tag">Entity Framework</span>
+                    <span class="tech-tag">SQL Server</span>
+                    <span class="tech-tag">Cloudinary</span>
+                    <span class="tech-tag">TypeScript</span>
+                </div>
+                <a href="https://sanoof-mediConnect.vercel.app" target="_blank" class="project-link">
+                    View Live <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project">
+                <img src="assets/plashoe.png" alt="Carple Project Screenshot" class="project-image" />
+                <div class="project-header">
+                    <div class="project-title">
+                        <div class="project-icon"></div>
+                        <h3>Plashoe E-commerce</h3>
+                    </div>
+                    <span class="project-status status-live">Live</span>
+                </div>
+                <p class="project-description">
+                    A full-stack e-commerce app for footwear featuring cart, admin, and order tracking.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">.NET Core</span>
+                    <span class="tech-tag">Entity Framework</span>
+                    <span class="tech-tag">TailwindCSS</span>
+                    <span class="tech-tag">SQL Server</span>
+                </div>
+                <a href="https://sanoof-plashoe.vercel.app/" target="_blank" class="project-link">
+                    View Live <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project">
+                <img src="assets/Adotzee.png" alt="Carple Project Screenshot" class="project-image" />
+                <div class="project-header">
+                    <div class="project-title">
+                        <div class="project-icon"></div>
+                        <h3>ADOTZEE</h3>
+                    </div>
+                    <span class="project-status status-live">Live</span>
+                </div>
+                <p class="project-description">
+                    Responsive admission consultancy site designed with modern React components.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TailwindCSS</span>
+                    <span class="tech-tag">React Router</span>
+                    <span class="tech-tag">Context API</span>
+                    <span class="tech-tag">Material UI</span>
+                </div>
+                <a href="https://www.adotzee.in" target="_blank" class="project-link">
+                    View Live <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project">
+                <img src="assets/shoe-old.png" alt="Carple Project Screenshot" class="project-image" />
+                <div class="project-header">
+                    <div class="project-title">
+                        <div class="project-icon"></div>
+                        <h3>Shoe E-commerce</h3>
+                    </div>
+                    <span class="project-status status-live">Live</span>
+                </div>
+                <p class="project-description">
+                    A responsive React UI footwear store with cart and filter options.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">JSON Server</span>
+                    <span class="tech-tag">TailwindCSS</span>
+                    <span class="tech-tag">SweetAlert</span>
+                    <span class="tech-tag">Toast</span>
+                </div>
+                <a href="https://react-e-commerce-kappa-eight.vercel.app/" target="_blank" class="project-link">
+                    View Live <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project">
+                <img src="assets/portfolio1.png" alt="Carple Project Screenshot" class="project-image" />
+                <div class="project-header">
+                    <div class="project-title">
+                        <div class="project-icon"></div>
+                        <h3>Old Portfolio</h3>
+                    </div>
+                    <span class="project-status status-live">Live</span>
+                </div>
+                <p class="project-description">
+                    My old portfolio showcasing early projects and basic web skills in HTML/CSS/JS.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">EmailJS</span>
+                </div>
+                <a href="https://sanoof11048.github.io/old-protfolio/" target="_blank" class="project-link">
+                    View Live <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="project">
+                <img src="assets/clonepic.png" alt="Carple Project Screenshot" class="project-image" />
+                <div class="project-header">
+                    <div class="project-title">
+                        <div class="project-icon"></div>
+                        <h3>Clone Website</h3>
+                    </div>
+                    <span class="project-status status-live">Live</span>
+                </div>
+                <p class="project-description">
+                    A pixel-perfect clone project, designed to mimic layout and style of a real website.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                </div>
+                <a href="assets/clone project/index.html" target="_blank" class="project-link">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
