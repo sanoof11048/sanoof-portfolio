@@ -68,3 +68,66 @@ document
       });
     }
   });
+
+// ==========================================================================
+// COMPACT BENTO GRID PROJECTS ENTRANCE ANIMATION (GSAP / IntersectionObserver)
+// ==========================================================================
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initBentoProjects);
+} else {
+  initBentoProjects();
+}
+
+function initBentoProjects() {
+  const bentoGrid = document.querySelector('.bento-grid');
+  if (!bentoGrid) return;
+
+  const bentoTiles = document.querySelectorAll('.bento-tile');
+  if (!bentoTiles.length) return;
+
+  // One-time entrance animation: fade in + scale from 0.96 to 1 with ~70ms stagger
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(bentoTiles,
+      { opacity: 0, scale: 0.96, y: 24 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.55,
+        stagger: 0.07,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: bentoGrid,
+          start: 'top 82%',
+          once: true
+        }
+      }
+    );
+  } else if ('IntersectionObserver' in window) {
+    // Fallback using IntersectionObserver
+    bentoTiles.forEach(tile => {
+      tile.style.opacity = '0';
+      tile.style.transform = 'scale(0.96) translateY(24px)';
+      tile.style.transition = 'opacity 550ms ease-out, transform 550ms ease-out';
+    });
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          bentoTiles.forEach((tile, index) => {
+            setTimeout(() => {
+              tile.style.opacity = '1';
+              tile.style.transform = 'scale(1) translateY(0)';
+            }, index * 70);
+          });
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+
+    observer.observe(bentoGrid);
+  }
+}
+
