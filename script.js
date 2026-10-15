@@ -131,3 +131,93 @@ function initBentoProjects() {
   }
 }
 
+// ==========================================================================
+// INFINITE SCROLL CLIENT LOGOS MARQUEE
+// ==========================================================================
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initInfiniteScroller);
+} else {
+  initInfiniteScroller();
+}
+
+function initInfiniteScroller() {
+  const scrollers = document.querySelectorAll(".scroller");
+  if (!scrollers.length) return;
+
+  // Apply animation only if user hasn't reduced motion
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    scrollers.forEach((scroller) => {
+      if (scroller.getAttribute("data-animated") === "true") return;
+      scroller.setAttribute("data-animated", "true");
+
+      const scrollerInner = scroller.querySelector(".scroller__inner");
+      if (!scrollerInner) return;
+
+      const scrollerContent = Array.from(scrollerInner.children);
+
+      // Duplicate content for seamless infinite scroll
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", "true");
+        scrollerInner.appendChild(duplicatedItem);
+      });
+    });
+  }
+}
+
+// ==========================================================================
+// WEBZIO TECHNOLOGY COMPANY SECTION REVEAL (GSAP / IntersectionObserver)
+// ==========================================================================
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCompanySection);
+} else {
+  initCompanySection();
+}
+
+function initCompanySection() {
+  const companyCard = document.querySelector('.company-card');
+  if (!companyCard) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    companyCard.style.opacity = '1';
+    companyCard.style.transform = 'none';
+    return;
+  }
+
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo(companyCard,
+      { opacity: 0, y: 26, scale: 0.98 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.65,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: companyCard,
+          start: 'top 85%',
+          once: true
+        }
+      }
+    );
+  } else if ('IntersectionObserver' in window) {
+    companyCard.style.opacity = '0';
+    companyCard.style.transform = 'translateY(26px) scale(0.98)';
+    companyCard.style.transition = 'opacity 650ms ease-out, transform 650ms ease-out';
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          companyCard.style.opacity = '1';
+          companyCard.style.transform = 'translateY(0) scale(1)';
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+
+    observer.observe(companyCard);
+  }
+}
+
+

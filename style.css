@@ -12,12 +12,15 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
+
 h1 {
   font-family: "Parkinsans", sans-serif;
 }
+
 .btn-tog {
   border: none;
 }
+
 .logo-img {
   border: none;
   background: none;
@@ -33,14 +36,17 @@ h1 {
   font-weight: bolder;
   color: #333;
 }
+
 .lists {
-  position: relative; /* needed for :before positioning if you want */
+  position: relative;
+  /* needed for :before positioning if you want */
   cursor: pointer;
   font-weight: bolder;
   color: inherit;
   border-bottom: 5px solid transparent;
   transition: color 0.3s ease, border-color 0.3s ease;
 }
+
 .lists:hover {
   color: #7843e8;
 }
@@ -77,7 +83,7 @@ h1 {
 .custom-navbar {
   max-width: 1100px;
   width: 100%;
-  border-radius: 1.5rem; 
+  border-radius: 1.5rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -100,6 +106,7 @@ h1 {
   /* background-color: #fff; */
   font-size: 1.25rem;
 }
+
 .custom-navbar {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(5px);
@@ -118,23 +125,28 @@ h1 {
   font-family: "Parkinsans", sans-serif;
 
   display: flex;
-  justify-content: center; /* Horizontal centering */
-  align-items: center;     /* Vertical centering */
+  justify-content: center;
+  /* Horizontal centering */
+  align-items: center;
+  /* Vertical centering */
 }
 
 .greet {
   font-weight: 800;
   /* margin-top: 1000px; */
 }
+
 .about {
   background: white;
   width: 100%;
   margin: 0;
 }
+
 .para-h {
   text-align: center;
   width: 75%;
 }
+
 .icons-box {
   text-align: center;
 }
@@ -154,10 +166,12 @@ h1 {
   z-index: 1;
   cursor: pointer;
 }
+
 .icons:hover {
   background: #fff;
   color: #929699;
 }
+
 .about-btn {
   text-decoration: none;
   border: none;
@@ -171,15 +185,18 @@ h1 {
   align-content: center;
   transition: 0.3s;
 }
+
 .about {
   margin-bottom: 30px;
 }
+
 .about-btn:hover {
   background: none;
   color: #7843e8;
   height: 40px;
   width: 180px;
 }
+
 .about-btna {
   text-decoration: none;
   text-align: center;
@@ -187,9 +204,11 @@ h1 {
   padding: 50px;
   transition: 0.3s;
 }
+
 .about-btna:hover {
   color: #7843e8;
 }
+
 .about {
   background: white;
   width: 100%;
@@ -242,8 +261,8 @@ h1 {
   background: #fff;
 }
 
-.webzio-link{
-  color: #7843e8; 
+.webzio-link {
+  color: #7843e8;
   font-weight: 500;
   text-decoration: none;
 }
@@ -366,12 +385,12 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
   }
-  
+
   .name-san:after {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .img-overlay {
     bottom: 10px;
     right: 10px;
@@ -499,6 +518,7 @@ h1 {
     gap: 15px;
   }
 }
+
 /* Alternative Modern Education Section Styles */
 .education {
   padding: 80px 0;
@@ -708,7 +728,7 @@ h1 {
   .edu-card-body {
     flex-direction: column;
   }
-  
+
   .edu-image {
     flex: 0 0 auto;
     width: 100%;
@@ -716,7 +736,7 @@ h1 {
     margin-right: 0;
     margin-bottom: 20px;
   }
-  
+
   .edu-card-header {
     position: relative;
     top: 0;
@@ -727,11 +747,11 @@ h1 {
     display: flex;
     justify-content: flex-end;
   }
-  
+
   .education {
     padding: 60px 0;
   }
-  
+
   .edu-title {
     font-size: 2rem;
   }
@@ -743,6 +763,7 @@ h1 {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -754,9 +775,17 @@ h1 {
   opacity: 0;
 }
 
-.edu-card:nth-child(1) { animation-delay: 0.1s; }
-.edu-card:nth-child(2) { animation-delay: 0.3s; }
-.edu-card:nth-child(3) { animation-delay: 0.5s; }
+.edu-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.edu-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.edu-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
 
 .contact {
   background-image: url("assets/bg-sec.png");
@@ -774,11 +803,13 @@ h1 {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .form-container h2 {
   margin-bottom: 20px;
   font-weight: bold;
   color: #333;
 }
+
 .sub-btn {
   float: right;
   background: #7843e8;
@@ -788,12 +819,14 @@ h1 {
   border-radius: 5px;
   border: none;
 }
+
 .form-in {
   border-radius: 5px;
   width: 100%;
   border: none;
   background: #f0f0f0;
 }
+
 .inp-sp {
   height: 60px;
 }
@@ -1045,7 +1078,7 @@ footer {
     text-align: center;
     margin-top: 10px;
   }
-  
+
   .footer-copyright p {
     text-align: center;
   }
@@ -1055,12 +1088,13 @@ footer {
   .footer-main {
     padding: 40px 0 20px;
   }
-  
+
   .footer-col {
     padding: 0 15px;
     margin-bottom: 30px;
   }
 }
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -1172,22 +1206,18 @@ footer {
 .bento-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(15, 23, 42, 0.35) 0%,
-    rgba(15, 23, 42, 0.75) 50%,
-    rgba(15, 23, 42, 0.96) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(15, 23, 42, 0.35) 0%,
+      rgba(15, 23, 42, 0.75) 50%,
+      rgba(15, 23, 42, 0.96) 100%);
   transition: background 280ms ease-out, opacity 280ms ease-out;
 }
 
 .bento-tile:hover .bento-scrim {
-  background: linear-gradient(
-    180deg,
-    rgba(15, 23, 42, 0.48) 0%,
-    rgba(15, 23, 42, 0.85) 50%,
-    rgba(15, 23, 42, 0.98) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(15, 23, 42, 0.48) 0%,
+      rgba(15, 23, 42, 0.85) 50%,
+      rgba(15, 23, 42, 0.98) 100%);
 }
 
 /* Content Layout */
@@ -1322,11 +1352,13 @@ footer {
     gap: 16px;
     padding: 0 10px;
   }
+
   .bento-featured {
     grid-column: span 2;
     grid-row: span 1;
     min-height: 320px;
   }
+
   .bento-medium {
     grid-column: span 1;
     grid-row: span 1;
@@ -1342,19 +1374,446 @@ footer {
     gap: 16px;
     padding: 0 6px;
   }
+
   .bento-featured,
   .bento-medium {
     grid-column: span 1;
     grid-row: auto;
     min-height: 230px;
   }
+
   .bento-content {
     padding: 20px 18px;
   }
+
   .bento-featured .bento-title {
     font-size: 1.6rem;
   }
+
   .bento-title {
     font-size: 1.3rem;
+  }
+}
+
+/* ==========================================================================
+   WORKED WITH / CLIENT LOGOS INFINITE SCROLLER
+   ========================================================================== */
+.clients-section {
+  background: #f8fafc;
+  padding: 60px 0 70px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.sec-head .client-count {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #7843e8;
+  background: rgba(120, 67, 232, 0.08);
+  border: 1px solid rgba(120, 67, 232, 0.2);
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin-left: 8px;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.clients-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 650px;
+  margin: -20px auto 35px;
+  text-align: center;
+}
+
+.clients-subtitle strong {
+  color: #7843e8;
+  font-weight: 600;
+}
+
+.scroller {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.scroller__inner {
+  padding-block: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg,
+      transparent,
+      white 12%,
+      white 88%,
+      transparent);
+  mask: linear-gradient(90deg,
+      transparent,
+      white 12%,
+      white 88%,
+      transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 28s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller:hover .scroller__inner {
+  animation-play-state: paused;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 25s;
+}
+
+.scroller[data-speed="normal"] {
+  --_animation-duration: 35s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 55s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 12px));
+  }
+}
+
+.client-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  padding: 12px 24px;
+  height: 84px;
+  min-width: 175px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  user-select: none;
+}
+
+.client-logo-card img {
+  max-height: 48px;
+  max-width: 130px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.72;
+  transition: filter 0.28s ease, opacity 0.28s ease, transform 0.28s ease;
+}
+
+.client-logo-card:hover {
+  transform: translateY(-3px);
+  border-color: #7843e8;
+  box-shadow: 0 10px 24px rgba(120, 67, 232, 0.12);
+}
+
+.client-logo-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+@media (max-width: 768px) {
+  .clients-section {
+    padding: 45px 0 55px;
+  }
+
+  .client-logo-card {
+    height: 72px;
+    min-width: 140px;
+    padding: 10px 20px;
+  }
+
+  .client-logo-card img {
+    max-height: 40px;
+    max-width: 100px;
+  }
+}
+
+/* ==========================================================================
+   WEBZIO TECHNOLOGY COMPANY SECTION
+   ========================================================================== */
+.company-section {
+  background: #f8fafc;
+  padding: 80px 0 90px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.company-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7843e8;
+  background: rgba(120, 67, 232, 0.08);
+  border: 1px solid rgba(120, 67, 232, 0.2);
+  border-radius: 50px;
+  padding: 6px 16px;
+  margin-bottom: 14px;
+}
+
+.company-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 48px 44px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-card:hover {
+  box-shadow: 0 16px 36px rgba(120, 67, 232, 0.08);
+}
+
+/* Brand Box (Left Column) */
+.company-brand-box {
+  background: #fbfcfe;
+  border: 1px solid #edf2f7;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.company-badge-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.company-est-badge,
+.company-loc-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.company-logo-frame {
+  width: 100%;
+  max-width: 340px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  padding: 6px 14px;
+}
+
+.company-logo-img {
+  max-width: 100%;
+  max-height: 56px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.company-brand-box:hover .company-logo-img {
+  transform: scale(1.04);
+}
+
+.company-tagline {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #7843e8;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.company-capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.company-cap {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 5px 12px;
+  display: inline-flex;
+  align-items: center;
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.company-cap:hover {
+  border-color: #7843e8;
+  color: #7843e8;
+  transform: translateY(-2px);
+}
+
+/* Content Box (Right Column) */
+.company-content-box {
+  padding-left: 10px;
+}
+
+.company-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.company-name {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.company-role-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7843e8;
+  background: rgba(120, 67, 232, 0.08);
+  border: 1px solid rgba(120, 67, 232, 0.2);
+  border-radius: 20px;
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.company-lead {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 14px;
+}
+
+.company-subtext {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+/* Action Buttons */
+.company-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.company-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.company-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid #cbd5e1;
+  color: #334155;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.company-secondary-btn:hover {
+  border-color: #7843e8;
+  color: #7843e8;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(120, 67, 232, 0.15);
+}
+
+.company-primary-btn:focus-visible,
+.company-secondary-btn:focus-visible {
+  outline: 3px solid rgba(120, 67, 232, 0.5);
+  outline-offset: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .company-card {
+    padding: 36px 28px;
+  }
+
+  .company-content-box {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-section {
+    padding: 55px 0 65px;
+  }
+
+  .company-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+
+  .company-name {
+    font-size: 1.5rem;
+  }
+
+  .company-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .company-primary-btn,
+  .company-secondary-btn {
+    width: 100%;
+    text-align: center;
   }
 }

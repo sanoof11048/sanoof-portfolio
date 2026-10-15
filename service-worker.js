@@ -1,8 +1,9 @@
-const CACHE_NAME = "sanoof-portfolio-cache-v2";
+const CACHE_NAME = "sanoof-portfolio-cache-v7";
 
 const urlsToCache = [
   "./",
   "./index.html",
+  "./projects.html",
   "./style.css",
   "./script.js",
   "./manifest.json",
@@ -21,6 +22,13 @@ const urlsToCache = [
 
   // Images
   "./assets/newSanoof_1.jpg",
+  "./assets/aquzio.jpg",
+  "./assets/kenby.jpg",
+  "./assets/edrops.jpg",
+  "./assets/ramzi-green.jpg",
+  "./assets/carple-preview.png",
+  "./assets/webzio-preview.png",
+  "./assets/machinery-project.png",
   "./assets/plashoe.png",
   "./assets/Adotzee.png",
   "./assets/portfolio1.png",
@@ -29,8 +37,29 @@ const urlsToCache = [
   "./assets/KEMHS.jpeg",
   "./assets/GHSS3.png",
   "./assets/kinfra.png",
+  "./assets/manipal.webp",
   "./assets/mediConnect.png",
   "./assets/bg-sec.png",
+
+  // Company Brand
+  "./WebzioLogos/webzioLOGO-01-cropped.webp",
+
+  // Client Logos (All 15 Optimized)
+  "./ClientLogos/Adotzee.webp",
+  "./ClientLogos/BioDropsLogo.webp",
+  "./ClientLogos/BiofixLogo.webp",
+  "./ClientLogos/BrainbayLogo.webp",
+  "./ClientLogos/BrightLogo.webp",
+  "./ClientLogos/CloseCommunicationsLogo.webp",
+  "./ClientLogos/Code7Logo.webp",
+  "./ClientLogos/EdropsLogo.webp",
+  "./ClientLogos/EssarLogo.webp",
+  "./ClientLogos/GongothriLogo.webp",
+  "./ClientLogos/KwaterLogo.webp",
+  "./ClientLogos/NiloraLogo.webp",
+  "./ClientLogos/RamziGreenLogo.webp",
+  "./ClientLogos/TidyMimoLogo.webp",
+  "./ClientLogos/TipLogo.webp",
 
   // Icons
   "./assets/icons/icon-192.png",
@@ -46,15 +75,19 @@ const urlsToCache = [
   "./assets/icons/net.png",
   "./assets/icons/icons8-sql-96.png",
   "./assets/icons/EF.png",
+  "./assets/icons/nextjs.png",
+  "./assets/icons/nestjs.png",
+  "./assets/icons/node.png",
   "./assets/icons/ADO-DOT-NET-Basics.jpg",
   "./assets/icons/DapperLogo.png",
   "./assets/icons/tailwind.png",
+  "./assets/icons/typescript.png",
   "./assets/icons/vecteezy_javascript-logo-png-javascript-icon-transparent-png_27127463.png",
   "./assets/icons/icons8-css-logo-color/icons8-css-logo-480.png",
   "./assets/icons/icons8-html-logo-color/icons8-html-logo-480.png",
 
   // CV
-  "./assets/Sanoof+Fullstack+Developer+(React+++.NET).pdf"
+  "./resume.pdf"
 ];
 
 // INSTALL: Cache required files
