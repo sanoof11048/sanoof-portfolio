@@ -1439,16 +1439,17 @@ footer {
 }
 
 .scroller {
-  max-width: 1200px;
+  --_scroller-gap: 1.5rem;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
 .scroller__inner {
-  padding-block: 10px;
+  padding-block: 12px;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: var(--_scroller-gap);
 }
 
 .scroller[data-animated="true"] {
@@ -1468,7 +1469,7 @@ footer {
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 28s) var(--_animation-direction, forwards) linear infinite;
+  animation: scroll var(--_animation-duration, 35s) var(--_animation-direction, forwards) linear infinite;
 }
 
 .scroller:hover .scroller__inner {
@@ -1497,7 +1498,7 @@ footer {
 
 @keyframes scroll {
   to {
-    transform: translate(calc(-50% - 12px));
+    transform: translate(calc(-50% - (var(--_scroller-gap) / 2)));
   }
 }
 
@@ -1505,6 +1506,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 14px;
   padding: 12px 24px;
   height: 84px;
@@ -1551,6 +1554,19 @@ footer {
   .client-logo-card img {
     max-height: 40px;
     max-width: 100px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroller[data-animated="true"] {
+    -webkit-mask: none;
+    mask: none;
+    overflow: visible;
+  }
+  .scroller[data-animated="true"] .scroller__inner {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

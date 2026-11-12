@@ -1,4 +1,4 @@
-const CACHE_NAME = "sanoof-portfolio-cache-v8";
+const CACHE_NAME = "sanoof-portfolio-cache-v10";
 
 const urlsToCache = [
   "./",
@@ -62,7 +62,14 @@ const urlsToCache = [
   "./ClientLogos/TidyMimoLogo.webp",
   "./ClientLogos/TipLogo.webp",
 
-  // Icons
+  // Root Favicons
+  "./favicon.ico",
+  "./favicon.svg",
+  "./favicon-32x32.png",
+  "./favicon-16x16.png",
+  "./apple-touch-icon.png",
+
+  // Legacy Icons
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./assets/icons/favicon-16x16.png",

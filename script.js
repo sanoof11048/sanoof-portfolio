@@ -144,9 +144,14 @@ function initInfiniteScroller() {
   const scrollers = document.querySelectorAll(".scroller");
   if (!scrollers.length) return;
 
-  // Apply animation only if user hasn't reduced motion
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function setupScroller() {
     scrollers.forEach((scroller) => {
+      if (motionQuery.matches) {
+        scroller.removeAttribute("data-animated");
+        return;
+      }
       if (scroller.getAttribute("data-animated") === "true") return;
       scroller.setAttribute("data-animated", "true");
 
@@ -155,13 +160,18 @@ function initInfiniteScroller() {
 
       const scrollerContent = Array.from(scrollerInner.children);
 
-      // Duplicate content for seamless infinite scroll
+      // Duplicate content for seamless infinite scroll (sam.html pattern)
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         duplicatedItem.setAttribute("aria-hidden", "true");
         scrollerInner.appendChild(duplicatedItem);
       });
     });
+  }
+
+  setupScroller();
+  if (typeof motionQuery.addEventListener === 'function') {
+    motionQuery.addEventListener('change', setupScroller);
   }
 }
 
