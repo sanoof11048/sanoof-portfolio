@@ -1,9 +1,10 @@
-const CACHE_NAME = "sanoof-portfolio-cache-v7";
+const CACHE_NAME = "sanoof-portfolio-cache-v8";
 
 const urlsToCache = [
   "./",
   "./index.html",
   "./projects.html",
+  "./404.html",
   "./style.css",
   "./script.js",
   "./manifest.json",

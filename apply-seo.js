@@ -10,12 +10,12 @@ html = html.replace(
 
 html = html.replace(
     /<meta name="description"\s*content="[^"]*"\s*\/?>/s,
-    `<meta name="description" content="Mohammed Sanoof is a software engineer and founder of Webzio Technology, building .NET applications, ERP systems, business software, and modern web applications." />`
+    `<meta name="description" content="Discover Mohammed Sanoof, software engineer and founder of Webzio Technology. Explore .NET development, ERP systems, business software, and full-stack projects." />`
 );
 
 html = html.replace(
     /<meta name="keywords"\s*content="[^"]*"\s*\/?>/s,
-    `<meta name="keywords" content="Mohammed Sanoof, Software Engineer, Founder Webzio Technology, Full-Stack Developer, .NET Core, ASP.NET Core, C#, SQL Server, React, Next.js, ERP Developer, Kerala Developer" />`
+    `<meta name="keywords" content="Mohammed Sanoof, Mohammed Sanoof Software Engineer, Mohammed Sanoof Developer, Mohammed Sanoof Kerala, Mohammed Sanoof Portfolio, Founder of Webzio Technology, Full Stack .NET Developer, ASP.NET Core Developer, C# Developer, Software Engineer in Kerala, ERP Software Developer, Business Automation Developer, Full Stack Software Engineer" />`
 );
 
 html = html.replace(

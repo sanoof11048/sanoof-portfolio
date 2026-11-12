@@ -1,9 +1,10 @@
 {
-  "name": "Mohammed Sanoof Portfolio",
-  "short_name": "Sanoof",
+  "name": "Mohammed Sanoof | Software Engineer & Founder of Webzio Technology",
+  "short_name": "Mohammed Sanoof",
+  "description": "Discover Mohammed Sanoof, software engineer and founder of Webzio Technology. Explore .NET development, ERP systems, business software, and full-stack projects.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#0f172a",
   "theme_color": "#0f172a",
   "icons": [
     {

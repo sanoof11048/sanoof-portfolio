@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /sam.html
+
+User-agent: Googlebot
+Allow: /
+Disallow: /sam.html
+
 Sitemap: https://sanoof.webziotech.in/sitemap.xml

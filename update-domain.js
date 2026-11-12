@@ -6,10 +6,12 @@ filesToUpdate.forEach(file => {
     try {
         let content = fs.readFileSync(file, 'utf8');
         
-        // Ensure all historical domains point to the official verified domain
+        // Ensure all historical domains point to the official verified domains
         let newContent = content
             .replace(/https:\/\/sanoof-portfolio\.vercel\.app/g, 'https://sanoof.webziotech.in')
-            .replace(/https:\/\/sanoof\.webziointernational\.in/g, 'https://sanoof.webziotech.in');
+            .replace(/https:\/\/sanoof\.webziointernational\.in/g, 'https://sanoof.webziotech.in')
+            .replace(/https:\/\/www\.webziotechnology\.in\/?/g, 'https://www.webziotech.in/')
+            .replace(/https:\/\/webziotechnology\.in\/?/g, 'https://www.webziotech.in/');
         
         fs.writeFileSync(file, newContent);
         console.log(`Updated URLs in ${file}`);
