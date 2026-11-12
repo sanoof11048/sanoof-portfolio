@@ -1,2 +1,3 @@
 # Ignore public directory to prevent Vercel static zero-config from hijacking repo root
 public/
+
